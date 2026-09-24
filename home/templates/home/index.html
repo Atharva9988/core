@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <style>
+        table, th,td{
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <img src="https://media.licdn.com/dms/image/v2/D5622AQGdInfmsVgwig/feedshare-shrink_800/B56Zxl4kc3HoAo-/0/1771235854478?e=2147483647&v=beta&t=YKbnpcjzmlG3WTBDbZ-rzj23g1J2NqVs0syfx5bFOeE" alt="Portfolio" height="200"/>
+    <h1>Player</h1>
+    <!-- {{players}} -->
+
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Total runs</th>
+        </tr>
+
+        {% for player in players %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{player.name}}</td>
+            <td>{{player.age}}</td>
+            <td>{{player.totalruns}}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <!-- <img src="https://media.licdn.com/dms/image/v2/D5622AQGdInfmsVgwig/feedshare-shrink_800/B56Zxl4kc3HoAo-/0/1771235854478?e=2147483647&v=beta&t=YKbnpcjzmlG3WTBDbZ-rzj23g1J2NqVs0syfx5bFOeE" alt="Portfolio" height="200"/>
     <hr />
     <big><i><p>Backend systems built to last, that's the standard behind every project. Skilled in <b>FastAPI and Django</b>, focused on designing APIs and architectures that hold up under real-world traffic, not just demo conditions. Database design, authentication, and performance aren't treated as extras, they're the foundation everything else stands on. Currently diving into <b>Agentic AI</b>, building systems where LLMs stop just responding and start reasoning, planning, and executing multi-step tasks on their own. No hype, no shortcuts, just engineering that holds up.</p></i></big>
     <hr />
@@ -42,6 +70,6 @@
     </a>
     <hr />
     <p>Backend<sup>2</sup> + Agentic AI<sub>logic</sub> × Clean Code = Scalable Systems</p>
-    <p>(FastAPI + Django)<sup>2</sup> + Agentic AI<sub>reasoning</sub> × Clean Architecture = Production-Ready Systems</p>
+    <p>(FastAPI + Django)<sup>2</sup> + Agentic AI<sub>reasoning</sub> × Clean Architecture = Production-Ready Systems</p> -->
 </body>
 </html>
