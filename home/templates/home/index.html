@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        table, th,td{
-            border: 1px solid black;
-        }
-    </style>
-</head>
-<body>
-    <h1>Player</h1>
+{% extends "base.html" %}
+{% block start %}
+
+
+    <h1>Player Page</h1>
+
+    <a href="/contact/">
+        Contact
+    </a>
+    |
+    <a href="/about/">
+        About
+    </a>
     <!-- {{players}} -->
 
     <table>
@@ -71,5 +70,8 @@
     <hr />
     <p>Backend<sup>2</sup> + Agentic AI<sub>logic</sub> × Clean Code = Scalable Systems</p>
     <p>(FastAPI + Django)<sup>2</sup> + Agentic AI<sub>reasoning</sub> × Clean Architecture = Production-Ready Systems</p> -->
-</body>
-</html>
+
+
+
+
+{% endblock %}

@@ -16,8 +16,15 @@ def home(request):
     for player in players:
         print(player)
 
-    return render(request, "home/index.html" , context={'players': players})
+    return render(request, "home/index.html" , context={'page':'Django Practice','players': players})
 
+def about(request):
+    context = {'page' : 'About'}
+    return render(request, "home/about.html", context)
+
+def contact(request):
+    context = {'page' : 'Contact'}
+    return render(request, "home/contact.html", context)
 
 def livingroom(request):
     print("*" * 10)
