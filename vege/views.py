@@ -19,3 +19,4 @@ def receipes(request):
             )
         return redirect('/receipes/')    
     return render(request, 'receipes.html')
+
