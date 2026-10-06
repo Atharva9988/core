@@ -22,10 +22,24 @@
     <button type="submit" class="btn btn-success">Add Receipe</button>
   </form>
 
-  <p>Count: {{ receipes|length }}</p>
+
+  <hr>
+  <div class="mt-4">
+    <div class="mx-auto col-6">
+      <form>
+      <div class="mb-3">
+        <label for="receipe_name" class="form-label">Search Receipe</label>
+        <input name="search" type="text" class="form-control" required>
+      
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+  <hr>
 
 
-  <table class="table">
+  <table class="table mt-5">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -47,7 +61,8 @@
         {% endif %}
       </td>
       <td>
-        <a href="/delete_receipe/{{receipe.id}}/" class = "btn btn-danger">Delete</a>
+        <a href="/delete_receipe/{{receipe.id}}/" class = "btn btn-danger m-2">Delete</a>
+        <a href="/update_receipe/{{receipe.id}}/" class = "btn btn-success">Update</a>
       </td>
     </tr>
     {% endfor %}
