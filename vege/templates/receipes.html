@@ -41,7 +41,11 @@
       <th scope="row">{{forloop.counter}}</th>
       <td>{{receipe.receipe_name}}</td>
       <td>{{receipe.receipe_description}}</td>
-      <td>{{receipe.receipe_image}}</td>
+      <td>
+        {% if receipe.receipe_image %}
+          <img src="{{ receipe.receipe_image.url }}" style="width:60px; height:60px; object-fit:cover;">
+        {% endif %}
+      </td>
       <td>
         <a href="#" class = "btn btn-danger">Delete</a>
       </td>
