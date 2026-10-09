@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block start %}
+
+<div class="container mt-5">
+  <form class="col-6 mx-auto card p-3 shadow-lg" method ="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Add Receipe</h2>
+    <hr>
+    <div class="menu show position-static"
+     style="--bs-menu-min-width: 300px;">
+  <form class="d-flex flex-column gap-3 p-3">
+    <div>
+      <label for="exampleMenuFormEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleMenuFormEmail1" placeholder="email@example.com">
+    </div>
+    <div>
+      <label for="exampleMenuFormPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleMenuFormPassword1" placeholder="Password">
+    </div>
+    <div class="form-field">
+      <input type="checkbox" id="checkLabel" class="check" />
+      <label for="checkLabel">Example new checkbox</label>
+    </div>
+    <div class="vstack gap-2">
+      <button type="submit" class="btn-solid theme-primary">Sign in</button>
+      <a class="theme-secondary" href="#">New around here? Sign up</a>
+      <a class="theme-secondary" href="#">Forgot password?</a>
+    </div>
+  </form>
+</div>
+    <button type="submit" class="btn btn-success">Add Receipe</button>
+  </form>
+
+
+
+
+</div>
+
+{% endblock %}
