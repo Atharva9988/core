@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from.models import Receipe
 from django.http import HttpResponse
-
+from django.contrib import messages
+from django.contrib.auth import authenticate, login
 # Create your views here.
 
 
@@ -55,4 +56,17 @@ def delete_receipe(request, id):
     queryset.delete()
     return redirect('/receipes/')
 
-    
+
+def login_page(request):
+    if request.method == "POST":
+        user = authenticate(
+            request,
+            username=request.POST.get('username'),
+            password=request.POST.get('password'),
+        )
+        if user is None:
+            messages.error(request, "Invalid username or password")
+            return redirect('/login/')
+        login(request, user)
+        return redirect('/receipes/')
+    return render(request, 'login.html')

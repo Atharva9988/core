@@ -31,6 +31,7 @@ urlpatterns = [
     path('update_receipe/<id>/', update_receipe, name="update_receipe"),
     path('contact/', contact, name="contact"),
     path('about/', about, name="about"),
+    path('login/', login_page, name="login_page"),
 
     path('livingroom/', livingroom, name="livingroom"),
     
