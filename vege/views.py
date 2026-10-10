@@ -58,15 +58,7 @@ def delete_receipe(request, id):
 
 
 def login_page(request):
-    if request.method == "POST":
-        user = authenticate(
-            request,
-            username=request.POST.get('username'),
-            password=request.POST.get('password'),
-        )
-        if user is None:
-            messages.error(request, "Invalid username or password")
-            return redirect('/login/')
-        login(request, user)
-        return redirect('/receipes/')
     return render(request, 'login.html')
+
+def register(request):
+    return render(request, 'register.html')
